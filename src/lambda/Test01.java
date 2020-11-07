@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 /**
+ * 其实就是需要用到某个函数式接口的时候(仅仅需要一个方法,即对应动作)用lambda来直接实现这个动作
  * 三大特点:代码块,参数,自由变量的值
  * 千万别让lambda表达式引用一个会改变的变量(事实最终变量)这样才能保证并发的时候是安全的
  */
