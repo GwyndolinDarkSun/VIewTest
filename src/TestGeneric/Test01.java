@@ -20,7 +20,6 @@ public class Test01 {
         //实在要初始化可以Array List:ArrayList<Pair<String>>就行了(如果用硬是要上面方法,然后强转,则同样不安全)
 
 
-
     }
     //4.Varargs警告
     public static <T> void addAll(Collection<T> coll,T... ts){//ts就是一个数组
