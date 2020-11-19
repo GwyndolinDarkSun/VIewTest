@@ -10,7 +10,7 @@
 #我们可以在其中用size()方法设置大小---->但是不同的屏幕不可能大小都一样,因此可以用Toolkit.getDefaultToolkit()返回一个Toolkit对象,再用
 这个对象的getScreenSize()方法可以获取到一个包含了屏幕信息的Dimension对象,在引用对象属性即可获取屏幕的各个属性的int类型
 #setSize()可以设置默认的窗口大小
-#add()可以添加组件
+#add()可以添加组件(添加即调用)
 
 3.组件类(继承了JComponent类)
 #paintComponent()方法的覆盖可以描绘(但是需要重写MESSAGE_X和MESSAGE_Y两个常量)
@@ -32,3 +32,19 @@ Point2D(不是shape的子类)
 然而RectangularShape类定义了很多图形操作的通用方法
 椭圆和矩形很好构造,只需要左上角xy轴和宽高
 但是椭圆一般是用中心来构造的setFrameFromCenter()
+
+6.颜色与字体
+#通过setPaint()方法可以使上下文的所有后续的绘图选择颜色
+#fill()代替draw()则是填充
+#背景颜色可以用setBackground()
+#调用GraphicsEnvironment类的getAvailableFontFamilyNames()方法可以返回字体名
+获得对象需要getLocalGraphicsEnvironment()方法
+首先创建一个Font类的对象,然后指定属性
+deriveFont();int设置风格,float设置大小
+#字体的宽高和限速,取决于:字体
+                     字符串
+                     绘制字体的设备(屏幕)
+用Graphics2D的getFontRenderContext()方法返回一个对象,再用getStringBounds()方法返回2D对象
+
+7.图片
+使用ImageIcon类从文件读取图像
